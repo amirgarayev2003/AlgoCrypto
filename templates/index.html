@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Mean Reversion Analysis</title>
+    <link rel="stylesheet" href="static/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
 
 </head>
 <body>
 
-    <button onClick="window.location.reload();">
+
+
+    <div class="analysis-stats">
+
+    <p class="current-ticker">Mean Reversion Analysis for BTC/USDT</p>
+    <p class="z-score">Z-score: {{ z_score }}</p>
+    <p class="live-price">Live price is: {{ market_live }}</p>
+    <p class="buy_or_sell">You should: {{ buy_or_sell }}</p>
+
+
+    </div>
+
+
+    <button class="refresh-button" onClick="window.location.reload();">
 
       Refresh Page
 
     </button>
 
 
-    <h1>Mean Reversion Analysis for BTC/USDT</h1>
-    <p>Z-score: {{ z_score }}</p>
-    <p>Live price is: {{ market_live }}</p>
-    <p>You should: {{ buy_or_sell }}</p>
 </body>
 </html>
